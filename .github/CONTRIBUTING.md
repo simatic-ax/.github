@@ -17,7 +17,7 @@ Your feedback and questions are welcome.
 
 If you want to provide feedback, report bugs or request some support for SIMATIC AX you can use the official SIMATIC AX support desk.
 
-Do you think your feedback or question will be of interest to other AX users? Then you can also use the [SIMATIC AX Discussions](https://github.com/orgs/AX-Showcase/discussions)
+Do you think your feedback or question will be of interest to other AX users? Then you can also use the [SIMATIC AX Discussions](https://github.com/orgs/simatic-ax/discussions)
 
 Your comments and feedback are welcome, and the development team is available via a handful of different channels.
 
