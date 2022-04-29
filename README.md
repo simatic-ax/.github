@@ -1,1 +1,1 @@
-# .github
+# SIMATIC AX Community
