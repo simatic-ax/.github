@@ -4,31 +4,45 @@ Welcome, and thank you for your interest in contributing to SIMATIC AX Community
 
 There are many ways in which you can contribute, beyond writing code. The goal of this document is to provide a high-level overview of how you can get involved.
 
-## Providing feedback or asking questions regarding SIMATIC AX Community
+## GitHub Discussions
 
-Have you any feedback or questions regarding the SIMATIC AX Community?
-Does your feedback or question not fit to any particular repository?
+- Have you any question regarding the SIMATIC AX Community?
+- Would yo like to give feedback to the SIMATIC AX Community?
+- Do you miss something?
+- Would you like to submit a topic suggestion?
+  
+Please use [SIMATIC AX Discussions](https://github.com/orgs/simatic-ax/discussions)
 
-Rather then opening an issue, please ask on [SIMATIC AX Discussions](https://github.com/orgs/simatic-ax/discussions)
+Your feedback, questions or suggestions are welcome.
 
-Your feedback and questions are welcome.
+1. Open GitHub discussion
+   ![dis1](img/dsicussions1.png)
 
-## Providing feedback related to SIMATIC AX
+1. Select a category
 
-If you want to provide feedback, report bugs or request some support for SIMATIC AX you can use the official SIMATIC AX support desk.
+    ![dis2](img/dsicussions2.png)
 
-Do you think your feedback or question will be of interest to other AX users? Then you can also use the [SIMATIC AX Discussions](https://github.com/orgs/simatic-ax/discussions)
+1. Submit your question, feedback or idea
 
-Your comments and feedback are welcome, and the development team is available via a handful of different channels.
+## Reporting issues
 
-## Reporting Issues
+- Does your library or application example not work as described?
+- or have a feature request or an idea?
+- or just a question?
 
-Have you identified a reproducible problem in the example libraries, tutorials or application examples? Have a feature request? We want to hear about it! Here's how you can report your issue as effectively as possible.
+Feel free to report an issue direct in the related repository.
 
-### Creating Pull Requests
+1. Select the related repository
+    ![iss1](issues1.png)
 
-Before we can accept a pull request from you, you'll need to sign a `Contributor License Agreement (CLA)`. Please contact us.
+1. Create a new issue
 
-## Thank You!
+    ![iss2](img/issues2.png)
+
+1. Select one of the provided issue types
+
+    ![iss3](img/issues3.png)
+
+## Thank You
 
 Your contributions to open source, large or small, make great projects like this possible. Thank you for taking the time to contribute.
