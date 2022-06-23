@@ -49,6 +49,7 @@ Feel free to report an issue direct in the related repository.
 
     ![iss3](img/issues3.png)
 
+
 ## Thank You
 
 Your contributions to this open source project - large or small - let´s us create better automation solutions - together! Thank you for beeing a essential part of this journey.
