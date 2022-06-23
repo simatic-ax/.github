@@ -9,7 +9,7 @@ To be always informed what's actually [discussed about SIMATIC AX](https://githu
 
 **(for members of the SIMATIC AX organization only)**
 
-![notification](./subscribe_notifications.png)
+![](./images/subscribe_notifications.png)
 
 > This works also for other repositories you're interested in
 
