@@ -1,17 +1,26 @@
 # SIMATIC AX Community
 
-## Welcome to our SIMATIC AX Community!!!
+## Welcome to our SIMATIC AX Community
 
-Please visit our **[overview](https://github.com/orgs/simatic-ax/discussions/1)** to find some information about the content of the SIMATIC AX organization. **(for members of the SIMATIC AX organization only)**
+Please visit our **[overview](https://github.com/orgs/simatic-ax/discussions/1)** to find some information about the content of the SIMATIC AX organization. **(for members of the SIMATIC AX GitHub organization only)**
 
-## Keep informend
-To be always informed what's actually [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), suscribe to the actvities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable Watch --> `All Activity`
+Click on the badges below to find more Siemens [open source projects](https://opensource.siemens.com)!
 
-**(for members of the SIMATIC AX GitHub-Organization only)**
+[![Siemens](https://img.shields.io/badge/github-siemens-009999?logo=github)](https://github.com/siemens)
+[![MindSphere](https://img.shields.io/badge/github-mindsphere-003751?logo=github)](https://github.com/mindsphere)
+[![Mendix](https://img.shields.io/badge/github-mendix-0595db?logo=github)](https://github.com/mendix)
+[![IOT2050](https://img.shields.io/badge/github-iot2050-green?logo=github)](https://github.com/SIMATICmeetsLinux)
+[![TIA Portal](https://img.shields.io/badge/github-tia%20portal-02D8A0?logo=github)](https://github.com/tia-portal-applications)
+
+## Stay informed
+
+To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
+
+**(for members of the SIMATIC AX GitHub organization only)**
 
 ![main](./images/subscribe_notifications.png)
 
-> This works also for other repositories you're interested in
+> This also works for other repositories you're interested in
 
 ## Contributing
 
