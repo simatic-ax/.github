@@ -5,7 +5,7 @@ We believe that collaboration helps everybody to create better products and serv
 ## Limited access
 
 The community is private, but we plan to open it up more over time.
-If you want to get access please [reach out to us](mailto:juergen.seidel@siemens.com;krueger.felix@siemens.com;beckerstefan@siemens.com;melaniehuber@siemens.com;stefan.hanke@siemens.com;thomas.kindler@siemens.com).
+Please follow this organization to indicate you're interested in getting access. We'll reach out to you once we accept new members.
 
 ## Other Siemens projects
 
