@@ -15,6 +15,9 @@ This application example can be used for:
 
 | Application Name | Description |
 |-|-|
-| [ae-sortingline](https://github.com/simatic-ax/ae-sortingline)   | Application example for a sorting line for items on a conveyor belt. In this example the usage of the [windowtracking library](https://github.com/simatic-ax/windowtracking) is shown. |
 | [ae-trafficlight](https://github.com/simatic-ax/ae-trafficlight)                                            | Application example which shows the usage of the [statemachine library](https://github.com/simatic-ax/statemachine).    |   |
+
+
+<!-- | [ae-sortingline](https://github.com/simatic-ax/ae-sortingline)   | Application example for a sorting line for items on a conveyor belt. In this example the usage of the [windowtracking library](https://github.com/simatic-ax/windowtracking) is shown. |
 | [ae-json-library](https://github.com/simatic-ax/ae-json-library) | Application example which shows the usage of the [Json library](https://github.com/simatic-ax/json). |                              |   |
+ -->
