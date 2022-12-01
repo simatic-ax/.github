@@ -8,7 +8,7 @@ Please visit our **[overview](https://github.com/orgs/simatic-ax/discussions/1)*
 
 To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
 
-![main](../images/subscribe_notifications.png)
+![main](https://github.com/simatic-ax/.github/blob/main/images/subscribe_notifications.png)
 
 > This also works for other repositories you're interested in
 
