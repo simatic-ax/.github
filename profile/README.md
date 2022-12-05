@@ -12,8 +12,6 @@ It is a platform where you find some useful ST examples for SIMATIC AX like:
 - **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
 - **Tutorials** for self-study. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/tutorials.md)
 
-Please visit our **[overview](https://github.com/orgs/simatic-ax/discussions/1)** to find some information about the content of the SIMATIC AX organization.
-
 ## Stay informed
 
 To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
