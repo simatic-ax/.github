@@ -2,6 +2,16 @@
 
 We believe that collaboration helps everybody to create better products and services, which ultimately makes our world a better place. We made it our mission to provide you with such a space to grow together. **This space is here!**
 
+## What is the SIMATIC AX Open Source Community?
+
+It is a platform where you find some useful ST examples for SIMATIC AX like:
+
+- **Application Examples** for SIMATIC AX. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/appl-example.md)
+- **Code Snippets** that can be reused in AX Code. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/code-snippets.md)
+- **Example Libraries** for usage in your own projects and idea creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/example-libraries.md)
+- **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
+- **Tutorials** for self-study. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/tutorials.md)
+
 Please visit our **[overview](https://github.com/orgs/simatic-ax/discussions/1)** to find some information about the content of the SIMATIC AX organization.
 
 ## Stay informed
@@ -11,6 +21,10 @@ To be always informed what's currently [discussed about SIMATIC AX](https://gith
 ![main](https://github.com/simatic-ax/.github/blob/main/images/subscribe_notifications.png)
 
 > This also works for other repositories you're interested in
+
+## Using packages in your projects
+
+If you want to use packages from the simatic-ax registry in your PLC projects in SIMATIC AX, you have to login to the GitHub npm registry with a personal access token. How to do this is explained here: [Documentation Personal Access Token](https://github.com/simatic-ax/.github/tree/main/docs/personalaccesstoken.md)
 
 ## Contributing
 
