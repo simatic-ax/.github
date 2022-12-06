@@ -1,3 +1,5 @@
+![GitHubCommunityBanner](https://user-images.githubusercontent.com/102975940/205955507-82960034-463c-42c2-b97c-a293ff15479e.svg)
+
 # SIMATIC AX Community
 
 We believe that collaboration helps everybody to create better products and services, which ultimately makes our world a better place. We made it our mission to provide you with such a space to grow together. **This space is here!**
