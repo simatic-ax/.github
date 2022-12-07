@@ -1,4 +1,4 @@
-![main](https://github.com/simatic-ax/.github/blob/main/images/GitHubCommunityBanner.svg)
+![main](./GitHubCommunityBanner.svg)
 
 # SIMATIC AX Community
 
@@ -18,7 +18,7 @@ It is a platform where you find some useful ST examples for SIMATIC AX like:
 
 To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
 
-![main](https://github.com/simatic-ax/.github/blob/main/images/subscribe_notifications.png)
+![main](./subscribe_notifications.png)
 
 > This also works for other repositories you're interested in
 
