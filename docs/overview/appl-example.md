@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Here you can find an overview about the application examples offered in our SIMATIC AX GitHub Community. 
+Here you can find an overview about the application examples offered in our SIMATIC AX GitHub Community.
 
 This application example can be used for:
 
