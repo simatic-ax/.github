@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Here you'll find an overview about the example libraries you can find on our SIMATIC AX GitHub Community. 
+Here you'll find an overview about the example libraries you can find on our SIMATIC AX GitHub Community.
 
 This example libraries can be used for:
 
