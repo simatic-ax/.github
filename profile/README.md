@@ -1,4 +1,5 @@
 ![main](https://github.com/simatic-ax/.github/blob/main/images/GitHubCommunityBanner.svg)
+
 # SIMATIC AX Community
 
 We believe that collaboration helps everybody to create better products and services, which ultimately makes our world a better place. We made it our mission to provide you with such a space to grow together. **This space is here!**

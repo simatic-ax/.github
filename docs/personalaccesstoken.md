@@ -1,6 +1,7 @@
 # Personal access token for the GitHub registry
 
 ## Content
+
 - [Personal access token for the GitHub registry](#personal-access-token-for-the-github-registry)
   - [Content](#content)
   - [Purpose for personal access token](#purpose-for-personal-access-token)
@@ -21,7 +22,7 @@ To create an personal access on GitHub token follow this [link](https://docs.git
 > It's ***very*** important that you check the checkbox `write:packages`
 >
 > ![image](images/readpackage.png)
-> 
+>
 > For security reasons, your token should be expire after wa while (by default it's 30 days)
 
 > Remember this token. You'll need it for the login in the next step
@@ -61,10 +62,10 @@ To login into the GitHub registry for Simatic AX within your IDE (Web or local A
     ![drawing](images/token.png)  
 
 Now you're able to install all dependencies to develop on your library.
+
 ## Workspace settings to access the github registry
 
 To access the github registry from your workspace, you've to announce it in the apax.yml.
-
 
 Please enter the following code into your apax.yml:
 
