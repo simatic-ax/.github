@@ -18,7 +18,11 @@ It is a platform where you find some useful ST examples for SIMATIC AX like:
 
 To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
 
+<details><summary>Show screenshot ... </summary>
+
 ![main](https://github.com/simatic-ax/.github/blob/main/profile/subscribe_notifications.png)
+
+</details>
 
 > This also works for other repositories you're interested in
 
