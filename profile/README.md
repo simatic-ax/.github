@@ -14,6 +14,10 @@ It is a platform where you find some useful ST examples for SIMATIC AX like:
 - **Code Snippets** that can be reused in AX Code. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/code-snippets.md)
 - **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
 
+## Contributing
+
+Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, propose any changes to this repository using Pull Requests.
+
 ## Stay informed
 
 To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
@@ -29,10 +33,6 @@ To be always informed what's currently [discussed about SIMATIC AX](https://gith
 ## Using packages in your projects
 
 If you want to use packages from the simatic-ax registry in your PLC projects in SIMATIC AX, you have to login to the GitHub npm registry with a personal access token. How to do this is explained here: [Documentation Personal Access Token](https://github.com/simatic-ax/.github/tree/main/docs/personalaccesstoken.md)
-
-## Contributing
-
-Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, propose any changes to this repository using Pull Requests.
 
 Further information:
 
