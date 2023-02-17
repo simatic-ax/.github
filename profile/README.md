@@ -9,10 +9,10 @@ We believe that collaboration helps everybody to create better products and serv
 It is a platform where you find some useful ST examples for SIMATIC AX like:
 
 - **Application Examples** for SIMATIC AX. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/appl-example.md)
-- **Code Snippets** that can be reused in AX Code. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/code-snippets.md)
 - **Example Libraries** for usage in your own projects and idea creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/example-libraries.md)
-- **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
 - **Tutorials** for self-study. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/tutorials.md)
+- **Code Snippets** that can be reused in AX Code. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/code-snippets.md)
+- **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
 
 ## Stay informed
 
