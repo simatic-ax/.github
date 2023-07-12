@@ -8,7 +8,7 @@ This Contribution License Agreement (“Agreement”) is agreed to by the party 
 
    **"Code"** means the computer software code, whether in human-readable or machine-executable form, that is delivered by You to Siemens under this Agreement.
 
-   **"Project"** means any of the projects owned or managed by Siemens in which software is offered under a license approved by the Open Source Initiative (OSI) (www.opensource.org) and documentation offered under an OSI or a Creative Commons license (<https://creativecommons.org/licenses>) and for which Siemens defines this Agreement as a requirement.
+   **"Project"** means any of the projects owned or managed by Siemens in which software is offered under a license approved by the Open Source Initiative (OSI) (<www.opensource.org>) and documentation offered under an OSI or a Creative Commons license (<https://creativecommons.org/licenses>) and for which Siemens defines this Agreement as a requirement.
 
    **"Submit"** is the act of uploading, submitting, transmitting, or distributing code or other content to any Project, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Project for the purpose of discussing and improving that Project.
 
@@ -28,16 +28,16 @@ This Contribution License Agreement (“Agreement”) is agreed to by the party 
 
 1. **Licenses**.
 
-   a. **Copyright License**. 
-      
+   a. **Copyright License**.
+
       You grant Siemens, and those who receive the Submission directly or indirectly from Siemens, a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license in the Submission to reproduce, prepare derivative works of, publicly display, publicly perform, make available to the public by wire or wireless means, and distribute the Submission and such derivative works, and to sublicense or transfer any or all of the foregoing rights to third parties.
 
-   b. **Patent License**. 
-    
+   b. **Patent License**.
+
       You grant Siemens, and those who receive the Submission directly or indirectly from Siemens, a perpetual, worldwide, non-exclusive, sublicensable, royalty-free, irrevocable (except as stated in this section) and transferable license under Your patent claims that are necessarily infringed by the Submission or the combination of the Submission with the Project to which it was Submitted to make, have made, use, offer to sell, sell and import or otherwise dispose of the Submission alone or with the Project. If any entity institutes patent litigation against You or any other entity (including a cross-claim or counterclaim in a lawsuit) alleging that your Submission, or the Project to which you have contributed, constitutes direct or contributory patent infringement, then any patent licenses granted to that entity under this Agreement for that Submission or Project shall terminate as of the date such litigation is filed.
 
-   c. **Other Rights Reserved**. 
-   
+   c. **Other Rights Reserved**.
+
       Each party reserves all rights not expressly granted in this Agreement. No additional licenses or rights whatsoever (including, without limitation, any implied licenses) are granted by implication, exhaustion, estoppel or otherwise.
 
 1. **Representations and Warranties**.
