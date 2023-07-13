@@ -9,7 +9,7 @@
   - [Login into Simatic-Ax registry](#login-into-simatic-ax-registry)
     - [Login via CLI](#login-via-cli)
     - [Login via AX Code UI /Web or local IDE)](#login-via-ax-code-ui-web-or-local-ide)
-  - [Workspace settings to access the github registry](#workspace-settings-to-access-the-github-registry)
+  - [Workspace settings to access the GitHub registry](#workspace-settings-to-access-the-github-registry)
 
 ## Purpose for personal access token
 
@@ -23,9 +23,9 @@ To create an personal access on GitHub token follow this [link](https://docs.git
 >
 > ![image](images/readpackage.png)
 >
-> For security reasons, your token should be expire after wa while (by default it's 30 days)
-
-> Remember this token. You'll need it for the login in the next step
+> For security reasons, your token should be expire after wa while (by default it's 30 days).
+>
+> Remember this token. You'll need it for the login in the next step.
 
 ## Login into Simatic-Ax registry
 
@@ -45,7 +45,7 @@ To login into the GitHub registry for Simatic AX within your IDE (Web or local A
 
     ![drawing](images/apax_login.png)  
 
-1. Enter the Github URL
+1. Enter the GitHub URL
 
      ![drawing](images/github_url.png)  
 
@@ -63,9 +63,9 @@ To login into the GitHub registry for Simatic AX within your IDE (Web or local A
 
 Now you're able to install all dependencies to develop on your library.
 
-## Workspace settings to access the github registry
+## Workspace settings to access the GitHub registry
 
-To access the github registry from your workspace, you've to announce it in the apax.yml.
+To access the GitHub registry from your workspace, you've to announce it in the apax.yml.
 
 Please enter the following code into your apax.yml:
 
