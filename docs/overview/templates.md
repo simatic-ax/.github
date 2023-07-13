@@ -11,7 +11,11 @@ This templates can be used for:
 - own projects
 - base for new user defined templates
 
-## Overview of all templates
+## Overview of templates
+
+[List of all templates in this organisation](https://github.com/search?q=topic%3Atemplate+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+
+Promoted repositories:
 
 | Template Name | Description |
 |-|-|
