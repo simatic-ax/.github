@@ -13,7 +13,7 @@ Siemens provides products and solutions with industrial security functions that 
 In order to protect plants, systems, machines and networks against cyber threats, it is necessary to implement – and continuously maintain – a holistic, state-of-the-art industrial security concept. Siemens' products and solutions constitute one element of such a concept.
 Customers are responsible for preventing unauthorized access to their plants, systems, machines and networks. Such systems, machines and components should only be connected to an enterprise network or the internet if and to the extent such a connection is necessary and only when appropriate security measures (e.g. firewalls and/or network segmentation) are in place.
 
-For additional information on industrial security measures that may be implemented, please visit 
+For additional information on industrial security measures that may be implemented, please visit
 <https://www.siemens.com/industrialsecurity>.
 
 **1.3 Compliance with Export Control Regulations**
