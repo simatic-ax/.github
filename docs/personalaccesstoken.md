@@ -23,9 +23,8 @@ To create an personal access on GitHub token follow this [link](https://docs.git
 >
 > ![image](images/readpackage.png)
 >
-> For security reasons, your token should be expire after wa while (by default it's 30 days).
->
-> Remember this token. You'll need it for the login in the next step.
+> For security reasons, your token should be expire after wa while (by default it's 30 days)
+> Remember this token. You'll need it for the login in the next step
 
 ## Login into Simatic-Ax registry
 
