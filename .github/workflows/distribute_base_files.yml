@@ -1,0 +1,26 @@
+name: Global workflow to rule them all
+
+on:
+  # push:
+  #     branches: [ master ] #or main
+  workflow_dispatch: {} #to enable manual triggering of the action
+jobs:
+
+  replicate_changes:
+
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Replicating global workflow
+          uses: derberg/manage-files-in-multiple-repositories@v2
+          with:
+            github_token: ${{ secrets.DEPLOY_KEY }}
+            patterns_to_include: 'LICENSE.md'
+            repos_to_ignore: json
+            exclude_private: true
+            exclude_forked: true
+            branches: main
+            committer_username: sjuergen
+            commit_message: "ci: update license"
