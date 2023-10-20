@@ -18,8 +18,7 @@ jobs:
           with:
             github_token: ${{ secrets.DEPLOY_KEY }}
             patterns_to_include: 'LICENSE.md'
-            repos_to_ignore: json
-            exclude_private: true
+            exclude_private: false
             exclude_forked: true
             branches: main
             committer_username: sjuergen
