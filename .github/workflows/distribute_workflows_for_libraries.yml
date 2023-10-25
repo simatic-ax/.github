@@ -1,10 +1,15 @@
-name: Global workflow to distribute all workflow files for libraries
+name: Workflow to distribute default files
 
 on:
   workflow_dispatch: {} #to enable manual triggering of the action
 jobs:
 
-  replicate_changes:
+  # This job deploys the files:
+  # - workflows/libraries/release-library.yml, 
+  # - workflows/libraries/lint-repo.yml, 
+  # - workflows/libraries/build-library.yml
+  # to all repositories with the topic 'library'
+  deploy_library_workflows:
 
       runs-on: ubuntu-latest
 
@@ -17,9 +22,8 @@ jobs:
             github_token: ${{ secrets.DEPLOY_KEY }}
             patterns_to_include: workflows/libraries/release-library.yml, workflows/libraries/lint-repo.yml, workflows/libraries/build-library.yml
             destination: .github/workflows
-            topics_to_include: test
+            topics_to_include: library
             exclude_private: false
             exclude_forked: true
-            branches: main
             committer_username: simatic-ax-bot
             commit_message: "ci: distribute workflows for libraries"
