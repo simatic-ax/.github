@@ -2,7 +2,6 @@ on: push
 
 jobs:
   test-apax-lib:
-    needs: build-apax-lib
     uses: simatic-ax/actions/.github/workflows/apax-build-test.yml@stable
     secrets:
       APAX_TOKEN: ${{ secrets.APAX_TOKEN }}
