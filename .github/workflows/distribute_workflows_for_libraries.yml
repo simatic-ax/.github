@@ -46,6 +46,7 @@ jobs:
             github_token: ${{ secrets.DEPLOY_KEY }}
             patterns_to_include: files/libraries/.gitattributes, files/libraries/.gitignore, files/libraries/.markdownlint.yml
             topics_to_include: library
+            destination: .
             exclude_private: false
             exclude_forked: true
             committer_username: simatic-ax-bot
