@@ -1,4 +1,4 @@
-name: Global workflow to distribute all 
+name: Global workflow to distribute all workflow files for libraries
 
 on:
   workflow_dispatch: {} #to enable manual triggering of the action
@@ -15,7 +15,7 @@ jobs:
           uses: derberg/manage-files-in-multiple-repositories@v2
           with:
             github_token: ${{ secrets.DEPLOY_KEY }}
-            patterns_to_include: 'workflows/libraries'
+            patterns_to_include: workflows\libraries\release-library.yml, workflows\libraries\lint-repo.yml, workflows\libraries\build-library.yml
             destination: .github/workflows/libraries
             topics_to_include: test
             exclude_private: true
