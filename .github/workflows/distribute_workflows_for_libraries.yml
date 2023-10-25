@@ -1,4 +1,4 @@
-name: Global workflow to distribute all 
+name: Global workflow to distribute all workflow files for libraries
 
 on:
   workflow_dispatch: {} #to enable manual triggering of the action
