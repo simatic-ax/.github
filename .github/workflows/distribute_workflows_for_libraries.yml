@@ -50,7 +50,7 @@ jobs:
             exclude_private: false
             exclude_forked: true
             committer_username: simatic-ax-bot
-            commit_message: "ci: distribute workflows for libraries"
+            commit_message: "ci: distribute common files"
 
   # This job deploys the file:
   # LICENSE.md to ALL repositories
