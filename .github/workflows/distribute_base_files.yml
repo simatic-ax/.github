@@ -1,8 +1,6 @@
 name: Global workflow to rule them all
 
 on:
-  # push:
-  #     branches: [ master ] #or main
   workflow_dispatch: {} #to enable manual triggering of the action
 jobs:
 
@@ -21,5 +19,5 @@ jobs:
             exclude_private: false
             exclude_forked: true
             branches: main
-            committer_username: sjuergen
+            committer_username: simatic-ax-bot
             commit_message: "ci: update license"

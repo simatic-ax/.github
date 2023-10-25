@@ -1,4 +1,4 @@
-name: Global workflow to distribute all workflows for libraries"
+name: Global workflow to distribute all 
 
 on:
   workflow_dispatch: {} #to enable manual triggering of the action
@@ -15,10 +15,11 @@ jobs:
           uses: derberg/manage-files-in-multiple-repositories@v2
           with:
             github_token: ${{ secrets.DEPLOY_KEY }}
-            patterns_to_include: 'LICENSE.md'
-            repos_to_ignore: json
+            patterns_to_include: 'workflows/libraries'
+            destination: .github/workflows/libraries
+            topics_to_include: test
             exclude_private: true
             exclude_forked: true
             branches: main
-            committer_username: sjuergen
-            commit_message: "ci: update license"
+            committer_username: simatic-ax-bot
+            commit_message: "ci: distribute workflows for libraries"
