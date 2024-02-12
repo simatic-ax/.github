@@ -19,7 +19,7 @@ jobs:
 
       steps:
         - name: Checkout repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name: Replicating global workflow
           uses: derberg/manage-files-in-multiple-repositories@v2
           with:
@@ -43,7 +43,7 @@ jobs:
       needs: deploy_library_workflows
       steps:
         - name: Checkout repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name: Replicating global workflow
           uses: derberg/manage-files-in-multiple-repositories@v2
           with:
@@ -76,7 +76,7 @@ jobs:
 
       steps:
         - name: Checkout repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name: Replicating global workflow
           uses: derberg/manage-files-in-multiple-repositories@v2
           with:
