@@ -17,7 +17,7 @@ To be able to consume some packages from the `simatic-ax` group, you need to log
 
 ## Create an personal access token on GitHub
 
-To create an personal access on GitHub token follow this [link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+To create an personal access on GitHub token follow this [link]](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic))
 
 > It's ***very*** important that you check the checkbox `write:packages`
 >
