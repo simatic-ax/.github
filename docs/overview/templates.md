@@ -2,16 +2,16 @@
 
 ## Purpose
 
-Here you'll find an overview about some useful templates for project workspaces you can find on our SIMATIC AX GitHub Community. Each project template contains workflow/project type specific definitions and scripts, so they don't have to be recreated each time.
+Here you'll find an overview about some useful templates for project workspaces you can find on our SIMATIC AX GitHub Community. Each project template contains workflow/project type-specific definitions and scripts, so they don't have to be recreated each time.
 
-[More information regarding templates, you'll find here](https://console.prod.ax.siemens.cloud/docs/apax/templates)
+[More information regarding templates, you'll find here](https://console.simatic-ax.siemens.io/docs/apax/templates)
 
-This templates can be used for:
+These templates can be used for:
 
-- own projects
+- new github-ax-community repositories
 - base for new user defined templates
 
-## Overview of templates
+## Overview of all templates
 
 [List of all templates in this organisation](https://github.com/search?q=topic%3Atemplate+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
