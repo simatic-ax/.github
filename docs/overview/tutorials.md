@@ -19,3 +19,4 @@ Promoted repositories:
 |-|-|
 | [standardizer-tutorial-lib](https://github.com/simatic-ax/standardizer-tutorial-lib)   | This tutorial is specially designed for the AX standalone library developer. But ax2tia users will also find helpful tips and tricks for handling AX. |
 | [tipps-and-tricks](https://github.com/simatic-ax/tipps_and_tricks)   | Find useful features working with ax-code and simatic-ax ST |
+| [apax-cheat-sheet](https://github.com/simatic-ax/apax-cheat-sheet)   | Learn more about the correct usage of the SIMATIC AX package manager "Apax" |
