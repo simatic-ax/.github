@@ -18,7 +18,7 @@ In addition our release-pipelines will create apax-templates of these applicatio
 
 Promoted repositories:
 
-| Application Name | Description | Templates |
+| Application Name | Description | Package |
 |-|-|-|
 | [ae-trafficlight](https://github.com/simatic-ax/ae-trafficlight)                                            | Application example which shows the usage of the [statemachine library](https://github.com/simatic-ax/statemachine).    |[Link](https://github.com/simatic-ax/template-ae-trafficlight)|
 | [ae-json-library](https://github.com/simatic-ax/ae-json-library) | Application example which shows the usage of the [Json library](https://github.com/simatic-ax/json). |[Link](https://github.com/simatic-ax/template-ae-json-library)|
