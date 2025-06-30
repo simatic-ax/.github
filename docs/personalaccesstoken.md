@@ -1,15 +1,13 @@
 # Personal access token for the GitHub registry
 
-## Content
+## Table of contents
 
-- [Personal access token for the GitHub registry](#personal-access-token-for-the-github-registry)
-  - [Content](#content)
-  - [Purpose for personal access token](#purpose-for-personal-access-token)
-  - [Create an personal access token on GitHub](#create-an-personal-access-token-on-github)
-  - [Login into Simatic-Ax registry](#login-into-simatic-ax-registry)
+- [Purpose for personal access token](#purpose-for-personal-access-token)
+- [Create an personal access token on GitHub](#create-an-personal-access-token-on-github)
+- [Login into Simatic-Ax registry](#login-into-simatic-ax-registry)
     - [Login via CLI](#login-via-cli)
     - [Login via AX Code UI /Web or local IDE)](#login-via-ax-code-ui-web-or-local-ide)
-  - [Workspace settings to access the GitHub registry](#workspace-settings-to-access-the-github-registry)
+- [Workspace settings to access the GitHub registry](#workspace-settings-to-access-the-github-registry)
 
 ## Purpose for personal access token
 
@@ -36,17 +34,17 @@ To login via CLI you've to enter the following command. You've to replace `<your
 apax login --registry https://npm.pkg.github.com/ --password <your personal access token>
 ```
 
-### Login via AX Code UI /Web or local IDE)
+### Login via AX Code UI /Web or local IDE
 
 To login into the GitHub registry for Simatic AX within your IDE (Web or local AX Code) follow this steps:
 
 1. select the file `apax.yml`, click the right mouse button and select `Login to registry`
 
-    ![drawing](images/apax_login.png)  
+    ![drawing](./assets/images/apax_login.png)  
 
 1. Enter the GitHub URL
 
-     ![drawing](images/github_url.png)  
+     ![drawing](./assets/images/github_url.png)  
 
     ```url
     https://npm.pkg.github.com/
@@ -54,11 +52,11 @@ To login into the GitHub registry for Simatic AX within your IDE (Web or local A
 
 1. Leave the user name field empty and press `Enter`
 
-    ![drawing](images/enter.png)  
+    ![drawing](./assets/images/enter.png)  
 
 1. Enter your personal access token from GitHub with `Strg+V`
 
-    ![drawing](images/token.png)  
+    ![drawing](./assets/images/token.png)  
 
 Now you're able to install all dependencies to develop on your library.
 

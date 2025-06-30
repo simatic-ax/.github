@@ -31,5 +31,3 @@ Promoted repositories:
 | [axftcmlib](https://github.com/simatic-ax/axftcmlib)                              | Basic control modules for factory simulation (AX training purposes) | |
 | [types](https://github.com/simatic-ax/types)                                      | Collection of structured data types for devices and standardized protocols | |
 | [windowtracking](https://github.com/simatic-ax/windowtracking)                    | Useful library for positioning tracking on conveyor belts                     | [Appl. Example](https://github.com/simatic-ax/ae-sortingline) |
-<!-- | [kinematics](https://github.com/simatic-ax/kinematics)                                      | Collection of structured data types for devices and standardized protocols | |
-| [mocks](https://github.com/simatic-ax/mocks)                                      | Mocking is an important topic for unit testing with AX. This library contains some predefined mocks ||  -->

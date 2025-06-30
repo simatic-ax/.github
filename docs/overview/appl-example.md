@@ -25,5 +25,3 @@ Promoted repositories:
 | [ae-motion-tiax](https://github.com/simatic-ax/ae-motion-tiax)   | TIAX-Library application example using the "MotionControl.Native" sys-library allowing to connect to TO's. |[Link](https://github.com/simatic-ax/template-ae-motion-tiax)|
 | [ae-hw-engineering](https://github.com/simatic-ax/ae-hw-engineering)   | Application example which shows the usage of the AX hardware-engineering. |-|
 | [ae-axftcmlib](https://github.com/simatic-ax/ae-axftcmlib)   | Application example which shows the usage of the [axftcm library](https://github.com/simatic-ax/axftcmlib). |[Link](https://github.com/simatic-ax/template-ae-axftcmlib)|
-<!-- | [ae-sortingline](https://github.com/simatic-ax/ae-sortingline)   | Application example for a sorting line for items on a conveyor belt. In this example the usage of the [windowtracking library](https://github.com/simatic-ax/windowtracking) is shown. |-|                          
- -->
