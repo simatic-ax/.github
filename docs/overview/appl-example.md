@@ -18,9 +18,9 @@ In addition our release-pipelines will create apax-templates of these applicatio
 
 Promoted repositories:
 
-| Application Name | Description | Package |
-|-|-|-|
-| [ae-trafficlight](https://github.com/simatic-ax/ae-trafficlight)                                            | Application example which shows the usage of the [statemachine library](https://github.com/simatic-ax/statemachine).    |[Link](https://github.com/simatic-ax/ae-trafficlight/pkgs/npm/template-ae-trafficlight)|
-| [ae-json-library](https://github.com/simatic-ax/ae-json-library) | Application example which shows the usage of the [Json library](https://github.com/simatic-ax/json). |[Link](https://github.com/simatic-ax/ae-json-library/pkgs/npm/template-ae-json-library)|
-| [ae-motion-tiax](https://github.com/simatic-ax/ae-motion-tiax)   | TIAX-Library application example using the "MotionControl.Native" sys-library allowing to connect to TO's. |[Link](https://github.com/simatic-ax/ae-motion-tiax/pkgs/npm/template-ae-motion-tiax)|
-| [ae-hw-engineering](https://github.com/simatic-ax/ae-hw-engineering)   | Application example which shows the usage of the AX hardware-engineering. |[Link](https://github.com/simatic-ax/ae-hw-engineering/pkgs/npm/template-ae-hw-engineering)|
+| Application Name | Description |
+|-|-|
+| [ae-trafficlight](https://github.com/simatic-ax/ae-trafficlight)                                            | Application example which shows the usage of the [statemachine library](https://github.com/simatic-ax/statemachine).    |
+| [ae-json-library](https://github.com/simatic-ax/ae-json-library) | Application example which shows the usage of the [Json library](https://github.com/simatic-ax/json). |
+| [ae-motion-tiax](https://github.com/simatic-ax/ae-motion-tiax)   | TIAX-Library application example using the "MotionControl.Native" sys-library allowing to connect to TO's. |
+| [ae-hw-engineering](https://github.com/simatic-ax/ae-hw-engineering)   | Application example which shows the usage of the AX hardware-engineering. |
