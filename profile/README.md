@@ -25,11 +25,11 @@ The SIMATIC AX Open Source Community is a platform where you can find useful ST 
 - **[Project Templates](/docs/overview/templates.md)** - Templates for quick project setup
 
 ## Contributing
-Thanks for your interest in contributing to the community! We suggest you to read our [contributing guidelines](/CONTRIBUTING.md).
+Thanks for your interest in contributing to the community! We suggest you read our [contributing guidelines](/CONTRIBUTING.md).
 
 ## Stay Informed
 
-You may stay informed about the ongoings inside the community by checking out the [SIMATIC AX discussions](https://github.com/orgs/simatic-ax/discussions). In case you don't want to miss out on any new content created here, you may subscribe to the activities in the [discussions repository](https://github.com/simatic-ax/.discussions) by enabling `Watch` --> `All Activity`
+You may stay informed about the activities inside the community by checking out the [SIMATIC AX discussions](https://github.com/orgs/simatic-ax/discussions). In case you don't want to miss out on any new content created here, you may subscribe to the activities in the [discussions repository](https://github.com/simatic-ax/.discussions) by enabling `Watch` --> `All Activity`
 
 <details><summary>Show screenshot ... </summary>
 
@@ -41,8 +41,7 @@ You may stay informed about the ongoings inside the community by checking out th
 
 ## Using packages in your projects
 
-If you want to use packages from the  "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub npm.pkg registry with a personal access token. How to do this is explained in detail 
- [here](/docs/personalaccesstoken.md).  
+If you want to use packages from the "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub container registry using a personal access token. How to do this is explained in detail [here](/docs/personalaccesstoken.md).  
 
 Just add the following registry to your apax.yml file, login with apax and start exploring our community packages. 
 ```yml
