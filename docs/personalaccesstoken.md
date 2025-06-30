@@ -19,7 +19,7 @@ To create an personal access on GitHub token follow this [link](https://docs.git
 
 > It's ***very*** important that you check the checkbox `write:packages`
 >
-> ![image](images/readpackage.png)
+> ![image](./assets/images/readpackage.png)
 >
 > For security reasons, your token should be expire after wa while (by default it's 30 days)
 > Remember this token. You'll need it for the login in the next step
