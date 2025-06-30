@@ -39,8 +39,23 @@ You may stay informed about the ongoings inside the community by checking out th
 
 > This also works for other repositories you're interested in
 
-## Using Packages
-To use packages from the simatic-ax registry in your PLC projects in SIMATIC AX, you need to log in to the GitHub npm registry with a personal access token. Learn how in our [personal access token documentation](/docs/personalaccesstoken.md)
+## Using packages in your projects
+
+If you want to use packages from the  "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub npm.pkg registry with a personal access token. How to do this is explained in detail 
+ [here](/docs/personalaccesstoken.md).  
+
+Just add the following registry to your apax.yml file, login with apax and start exploring our community packages. 
+```yml
+registries:
+  "@simatic-ax": "https://npm.pkg.github.com/"
+```  
+
+When installing packages from 3rd party locations (other than the "@ax" product registry) it is always advised to validate package signatures. Add the following key in the "publicKey" section of your apax.yml.  
+
+```yml
+publicKeys:
+  "@simatic-ax": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+```  
 
 ## Other Siemens Projects
 Discover more Siemens [open source projects](https://opensource.siemens.com):
