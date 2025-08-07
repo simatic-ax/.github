@@ -6,7 +6,7 @@ We believe that collaboration helps everybody to create better products and serv
 
 ## What is the SIMATIC AX Open Source Community?
 
-It is a platform where you find some useful ST examples for SIMATIC AX like:
+It is a platform where you find some useful examples for PLC logic control and HMI integration within SIMATIC AX:
 
 - **Application Examples** for SIMATIC AX. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/appl-example.md)
 - **Example Libraries** for usage in your own projects and idea creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/example-libraries.md)
