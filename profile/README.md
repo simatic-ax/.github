@@ -33,7 +33,7 @@ You may stay informed about the activities inside the community by checking out 
 
 <details><summary>Show screenshot ... </summary>
 
-![main](/images/subscribe_notifications.png)
+![main](../docs/assets/images/subscribe_notifications.png)
 
 </details>
 
