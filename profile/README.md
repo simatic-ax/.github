@@ -18,14 +18,14 @@ The community is actively maintained by the [SIMATIC AX GitHub community admins]
 ## Community Resources
 The SIMATIC AX Open Source Community is a platform where you can find useful ST examples for SIMATIC AX:
 
-- **[Application Examples](/docs/overview/appl-example.md)** - Ready-to-use applications for SIMATIC AX
-- **[Example Libraries](/docs/overview/example-libraries.md)** - Libraries for use in your own projects
-- **[Tutorials](/docs/overview/tutorials.md)** - Self-study materials
-- **[Code Snippets](/docs/overview/code-snippets.md)** - Reusable code components
-- **[Project Templates](/docs/overview/templates.md)** - Templates for quick project setup
+- **[Application Examples](../docs/overview/appl-example.md)** - Ready-to-use applications for SIMATIC AX
+- **[Example Libraries](../docs/overview/example-libraries.md)** - Libraries for use in your own projects
+- **[Tutorials](../docs/overview/tutorials.md)** - Self-study materials
+- **[Code Snippets](../docs/overview/code-snippets.md)** - Reusable code components
+- **[Project Templates](../docs/overview/templates.md)** - Templates for quick project setup
 
 ## Contributing
-Thanks for your interest in contributing to the community! We suggest you read our [contributing guidelines](/CONTRIBUTING.md).
+Thanks for your interest in contributing to the community! We suggest you read our [contributing guidelines](../CONTRIBUTING.md).
 
 ## Stay Informed
 
@@ -41,7 +41,7 @@ You may stay informed about the activities inside the community by checking out 
 
 ## Using packages in your projects
 
-If you want to use packages from the "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub container registry using a personal access token. How to do this is explained in detail [here](/docs/personalaccesstoken.md).  
+If you want to use packages from the "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub container registry using a personal access token. How to do this is explained in detail [here](../docs/personalaccesstoken.md).  
 
 Just add the following registry to your apax.yml file, login with apax and start exploring our community packages. 
 ```yml
