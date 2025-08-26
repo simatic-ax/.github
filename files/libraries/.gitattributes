@@ -1,3 +1,0 @@
-﻿# `.gitattributes` reclassify `.st` files as iec-st:
-** linguist-vendored
-# *.ppjs linguist-language=ST

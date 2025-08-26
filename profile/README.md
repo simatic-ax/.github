@@ -1,32 +1,39 @@
-![main](https://github.com/simatic-ax/.github/blob/main/profile/GitHubCommunityBanner.svg)
+![main](./assets/images/GitHubCommunityBanner.svg)
 
 # SIMATIC AX Community
 
+## Table of Contents
+- [About Us](#about-us)
+- [Community Resources](#community-resources)
+- [Contributing](#contributing)
+- [Stay Informed](#stay-informed)
+- [Using Packages](#using-packages)
+- [Other Siemens Projects](#other-siemens-projects)
+
+## About Us
 We believe that collaboration helps everybody to create better products and services, which ultimately makes our world a better place. We made it our mission to provide you with such a space to grow together. **This space is here!**
 
-## What is the SIMATIC AX Open Source Community?
+The community is actively maintained by the [SIMATIC AX GitHub community admins](https://github.com/orgs/simatic-ax/teams/toa-teamofaxion). Feel free to contact us in case of questions.
 
-It is a platform where you find some useful examples for PLC logic control and HMI integration within SIMATIC AX:
+## Community Resources
+The SIMATIC AX Open Source Community is a platform where you can find useful ST examples for SIMATIC AX:
 
-- **Application Examples** for SIMATIC AX. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/appl-example.md)
-- **Example Libraries** for usage in your own projects and idea creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/example-libraries.md)
-- **Tutorials** for self-study. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/tutorials.md)
-- **Code Snippets** that can be reused in AX Code. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/code-snippets.md)
-- **Project Templates** for a head-start in content creation. [overview](https://github.com/simatic-ax/.github/blob/main/docs/overview/templates.md)
+- **[Application Examples](/docs/overview/appl-example.md)** - Ready-to-use applications for SIMATIC AX
+- **[Example Libraries](/docs/overview/example-libraries.md)** - Libraries for use in your own projects
+- **[Tutorials](/docs/overview/tutorials.md)** - Self-study materials
+- **[Code Snippets](/docs/overview/code-snippets.md)** - Reusable code components
+- **[Project Templates](/docs/overview/templates.md)** - Templates for quick project setup
 
 ## Contributing
+Thanks for your interest in contributing to the community! We suggest you read our [contributing guidelines](/CONTRIBUTING.md).
 
-Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, propose any changes to this repository using Pull Requests.
+## Stay Informed
 
-[Contributing to SIMATIC AX Community](https://github.com/simatic-ax/.github/blob/main/.github/CONTRIBUTING.md)
-
-## Stay informed
-
-To be always informed what's currently [discussed about SIMATIC AX](https://github.com/orgs/simatic-ax/discussions), subscribe to the activities on the [GitHub Discussions repository](https://github.com/simatic-ax/.discussions) and enable `Watch` --> `All Activity`
+You may stay informed about the activities inside the community by checking out the [SIMATIC AX discussions](https://github.com/orgs/simatic-ax/discussions). In case you don't want to miss out on any new content created here, you may subscribe to the activities in the [discussions repository](https://github.com/simatic-ax/.discussions) by enabling `Watch` --> `All Activity`
 
 <details><summary>Show screenshot ... </summary>
 
-![main](https://github.com/simatic-ax/.github/blob/main/profile/subscribe_notifications.png)
+![main](/images/subscribe_notifications.png)
 
 </details>
 
@@ -34,13 +41,23 @@ To be always informed what's currently [discussed about SIMATIC AX](https://gith
 
 ## Using packages in your projects
 
-If you want to use packages from the simatic-ax registry in your PLC projects in SIMATIC AX, you have to login to the GitHub npm registry with a personal access token. How to do this is explained here: [Documentation Personal Access Token](https://github.com/simatic-ax/.github/tree/main/docs/personalaccesstoken.md)
+If you want to use packages from the "@simatic-ax" community scope in your SIMATIC AX projects, you have to login to the GitHub container registry using a personal access token. How to do this is explained in detail [here](/docs/personalaccesstoken.md).  
 
-Further information:
+Just add the following registry to your apax.yml file, login with apax and start exploring our community packages. 
+```yml
+registries:
+  "@simatic-ax": "https://npm.pkg.github.com/"
+```  
 
-## Other Siemens projects
+When installing packages from 3rd party locations (other than the "@ax" product registry) it is always advised to validate package signatures. Add the following key in the "publicKey" section of your apax.yml.  
 
-Click on the badges below to find more Siemens [open source projects](https://opensource.siemens.com)!
+```yml
+publicKeys:
+  "@simatic-ax": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+```  
+
+## Other Siemens Projects
+Discover more Siemens [open source projects](https://opensource.siemens.com):
 
 [![Siemens](https://img.shields.io/badge/github-siemens-009999?logo=github)](https://github.com/siemens)
 [![Industrial Edge](https://img.shields.io/badge/github-industrial%20edge-e39537?logo=github)](https://github.com/industrial-edge)
