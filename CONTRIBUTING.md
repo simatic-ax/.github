@@ -83,6 +83,6 @@ Once all clearings are successful, our admins will create the repository within 
 
 ### Siemens employees
 
-In case you are a Siemens employee who likes to propose a new repository for the GitHub community, please the [Siemens contribution process](https://github.siemens.cloud/simatic-ax/.github/blob/main/profile/CONTRIBUTING.md) for a set of follow along instructions.
+In case you are a Siemens employee who likes to propose a new repository for the GitHub community, please read the [Siemens contribution process](https://github.siemens.cloud/simatic-ax/.github/blob/main/profile/CONTRIBUTING.md) for a set of follow along instructions.
 
 > For all inquiries, please get in touch via our [Admin Team](https://github.com/orgs/simatic-ax/teams/toa-teamofaxion).
