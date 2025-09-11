@@ -16,12 +16,8 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.8.0
         with:
-          args: --verbose --no-progress '**/*.md'
+          args: --verbose --no-progress --exclude "^https://github\\.siemens\\.cloud" '**/*.md'
           fail: true
           format: markdown
-          config: |
-            exclude = [
-              "^https://github\\.siemens\\.cloud"
-            ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
