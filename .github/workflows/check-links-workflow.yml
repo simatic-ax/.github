@@ -13,8 +13,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Check links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.8.0
         with:
-          check-modified-files-only: 'yes'
-          base-branch: 'main'
+          args: --verbose --no-progress '**/*.md'
+          fail: true
+          format: markdown
+          config: |
+            exclude = [
+              "^https://github\\.siemens\\.cloud"
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
