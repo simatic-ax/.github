@@ -61,8 +61,6 @@ When installing packages from 3rd party locations (other than the "@ax" product 
 
 ```yml
 publicKeys:
-  "@ax":
-    "v1": "13ccb23efdc4fa45cb5e9b467a0344b57414b3ff136921400128bfc403a916f6"
   "@simatic-ax":
     "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
     "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
