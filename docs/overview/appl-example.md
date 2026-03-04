@@ -20,6 +20,7 @@ Promoted repositories:
 
 | Application Name | Description |
 |-|-|
+| [ae-demo-rack](https://github.com/simatic-ax/ae-demo-rack) | Application example that shows the usage of the Application Example : Playground officerack - HardwareConfiguration and simple IO-/Drive usage. |
 | [ae-trafficlight](https://github.com/simatic-ax/ae-trafficlight) | Application example that shows the usage of the [statemachine library](https://github.com/simatic-ax/statemachine). |
 | [ae-json-library](https://github.com/simatic-ax/ae-json-library) | Application example that shows the usage of the [Json library](https://github.com/simatic-ax/json). |
 | [ae-motion-tiax](https://github.com/simatic-ax/ae-motion-tiax) | TIAX-Library application example using the "MotionControl.Native" sys-library, allowing connection to TOs. |
