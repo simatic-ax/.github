@@ -1,14 +1,12 @@
-name: Sync profile README
+name: Sync github folder
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'profile/README.md'
   workflow_dispatch:
 
 jobs:
-  sync-profile-readme-files:
+  sync-github-folder:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,10 +20,13 @@ jobs:
           token: ${{ secrets.SB_PAT_RW_TOKEN }}
           path: target
 
-      - name: Copy README
+      - name: Sync all files (excluding workflows folder)
         run: |
-          mkdir -p target/profile
-          cp profile/README.md target/profile/README.md
+          rsync -av --delete \
+            --exclude='.git/' \
+            --exclude='workflows/' \
+            --exclude='target/' \
+            . target/
 
       - name: Commit & push
         run: |
