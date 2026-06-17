@@ -1,0 +1,37 @@
+name: Sync profile README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'profile/README.md'
+  workflow_dispatch:
+
+jobs:
+  sync-profile-readme-files:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout source (.github)
+        uses: actions/checkout@v4
+
+      - name: Checkout target (.github-private)
+        uses: actions/checkout@v4
+        with:
+          repository: simatic-ax/.github-private
+          token: ${{ secrets.SB_PAT_RW_TOKEN }}
+          path: target
+
+      - name: Copy README
+        run: |
+          mkdir -p target/profile
+          cp profile/README.md target/profile/README.md
+
+      - name: Commit & push
+        run: |
+          cd target
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git diff --cached --quiet || git commit -m "Sync profile README from .github"
+          git push
