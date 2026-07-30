@@ -1,0 +1,96 @@
+# This workflow is going to be used during the development phase of the project
+name: Package development workflow
+
+on:
+  push:
+    branches:
+      - 'main'  # runs the workflow, once new changes have been integrated to main
+  pull_request:
+    branches:
+      - 'main' # run workflow in the scope of pull requests towards main
+      - 'release/*' # run workflow in the scope of pull requests towards release branches
+  workflow_call:
+    secrets:
+      APAX_TOKEN:
+        required: true
+    inputs:
+      ref:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+
+permissions:
+  contents: read     # required for checkout
+  packages: read     # required for pulling the container
+  actions: write     # required for artifact uploading
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:4.2.1
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref != '' && inputs.ref || github.ref }}
+
+      - name: Login to required registries
+        uses: simatic-ax/actions/apax-login@v4
+        with:
+          apax-token: ${{ secrets.APAX_TOKEN }}
+          registries: |
+            https://npm.pkg.github.com/,${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        uses: simatic-ax/actions/apax-install@v4
+        with:
+          immutable: true
+
+      - name: Determine version
+        id: determine_version
+        shell: bash
+        run: |
+          INPUT_VERSION="${{ inputs.version }}"
+          SHA_SHORT="${{ github.sha }}"
+          
+          if [ -z "$INPUT_VERSION" ]; then
+            echo "version=0.0.1-${SHA_SHORT}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${INPUT_VERSION}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Version the package
+        uses: simatic-ax/actions/apax-version@v4
+        with:
+          version: ${{ steps.determine_version.outputs.version }}
+          
+      - name: Build source code
+        uses: simatic-ax/actions/apax-build@v4
+
+      - name: Test source code
+        uses: simatic-ax/actions/apax-test@v4
+
+      - name: Check links
+        uses: gaurav-nelson/github-action--link-check@v1
+        with:
+          check-modified-files-only: 'yes'
+          base-branch: 'main'
+
+      - name: Upload build artifacts
+        if: ${{ github.event_name == 'workflow_call' || github.event_name == 'release'}}
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: |
+            bin/1500
+            bin/s7
+            bin/llvm
+          retention-days: 90
+          if-no-files-found: error
