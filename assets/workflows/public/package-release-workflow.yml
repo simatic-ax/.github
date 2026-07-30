@@ -1,0 +1,71 @@
+# This workflow is triggered when a release is published via the UI
+name: Release workflow
+
+# Start the workflow as soon as a release has been published via the UI
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read    # required for checkout
+  packages: write    # required for pulling the container
+  actions: write     # required for artifact uploading
+
+jobs:
+  call-development:
+    name: Build the package
+    uses: ./.github/workflows/package-development-workflow.yml
+    secrets:
+      APAX_TOKEN: ${{ secrets.APAX_TOKEN }}
+    with:
+      ref: ${{ github.event.release.target_commitish }}
+      version: ${{ github.event.release.tag_name }}
+
+  release:
+    name: Release the package
+    needs: call-development
+    runs-on: ubuntu-24.04
+    container:
+      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:4.2.1
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # checks out the branch that has been selected during the release process
+          ref: ${{ github.event.release.target_commitish }}
+          fetch-depth: 0
+
+      - name: Create bin folder
+        run: mkdir -p bin
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: bin
+
+      - name: Version package
+        uses: simatic-ax/actions/apax-version@v4
+        with:
+          version: ${{ github.event.release.tag_name }}
+
+      - name: Package source code
+        uses: simatic-ax/actions/apax-pack@v4
+        with:
+          key: ${{ secrets.APAX_SIGNKEY }}
+
+      - name: Login to required registries
+        uses: simatic-ax/actions/apax-login@v4
+        with:
+          apax-token: ${{ secrets.APAX_TOKEN }}
+          registries: |
+            https://npm.pkg.github.com/,${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish apax package
+        uses: simatic-ax/actions/apax-publish@v4
+        with:
+          registries: |
+            https://npm.pkg.github.com
