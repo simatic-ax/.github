@@ -33,7 +33,7 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-22.04
     container:
-      image: containers.github.siemens.cloud/simatic-ax/ci-images/apax-ci-image:4.2.1
+      image: containers.github.siemens.cloud/simatic-ax/ci-images/apax-ci-image:4.3.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
