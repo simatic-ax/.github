@@ -1,0 +1,191 @@
+
+# This GitHub Actions workflow generates an assessment Excel file for SIMATIC AX projects
+# and automatically creates an issue with download links and notification emails.
+#
+# Workflow Structure:
+# 1. collect-info: Gathers project information and creates info.yml artifact
+# 2. fill-excel: Downloads info, generates Excel file, and uploads as artifact  
+# 3. notify: Creates GitHub issue with download links and email notification
+#
+# The workflow is triggered manually via workflow_dispatch with two required inputs:
+# - EXACT_Ticket_ID: The EX Classification Ticket number
+# - Approver: The business approver (Promotor BL) selected from predefined options
+#
+# Artifacts generated:
+# - info-yml: Contains collected project information
+# - assessment-excel: The generated questionnaire Excel file
+#
+# The final issue includes direct links to the workflow run for artifact download
+# and a mailto link for email notification to the actor.
+
+name: Start Assessment
+on:
+  workflow_dispatch:
+    inputs:
+      EXACT_Ticket_ID:
+        description: 'Your EX Classification Ticket'
+        required: true
+        default: '0000'
+      Approver:
+        description: 'Promotor BL (Approver from Business Side to release)'
+        required: true
+        type: string
+
+jobs:
+  # Job 1: Collect project information and create info.yml artifact
+  # Uses simatic-ax internal action to gather project details, ticket info, and approver data
+  collect-info:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository to access project files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Python environment for the collection script
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      # Install required Python dependencies for info collection
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install requests pyyaml openpyxl
+      
+      # Collect project information using internal Simatic AX action
+      # This creates an info.yml file with project details, ticket ID, and approver
+      - name: Collect Info
+        uses: simatic-ax/internal-actions/collect-assessment-information@v1
+        with:
+          project_name: ${{ github.repository }}
+          username: ${{ github.actor }}
+          token: ${{ secrets.READ_USER_TOKEN }}
+          ticket_id: ${{ inputs.EXACT_Ticket_ID }}
+          approver: ${{ inputs.Approver }}
+          
+      # Upload the generated info.yml as an artifact for use in subsequent jobs
+      - name: Upload info.yml
+        uses: actions/upload-artifact@v3
+        with:
+          name: info-yml
+          path: info.yml
+
+  # Job 2: Generate the assessment Excel file using the collected information
+  # Downloads info.yml artifact and creates the questionnaire Excel file
+  fill-excel:
+    runs-on: ubuntu-latest
+    needs: collect-info  # Wait for info collection to complete
+    steps:
+      # Checkout repository for Excel generation scripts
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # Set up Python environment for Excel generation
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      # Install Python dependencies required for Excel file creation
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install requests pyyaml openpyxl
+            
+      # Download the info.yml artifact created in the previous job
+      - name: Download info.yml
+        uses: actions/download-artifact@v3
+        with:
+          name: info-yml
+      
+      # Generate the assessment Excel file using internal Simatic AX action
+      # This creates a Questionnaire_Contribution_*.xlsx file
+      - name: Create Assessment Excel-File
+        uses: simatic-ax/internal-actions/create-assessment-excel@v1
+
+      # Upload the generated Excel file as an artifact for download
+      - name: Upload Excel artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: assessment-excel
+          path: Questionnaire_Contribution_*.xlsx
+          
+      # Print workflow run information for reference
+      # Note: Artifacts are only available via API after complete workflow finish
+      - name: Print Run ID after Excel artifact upload
+        run: |
+          echo "Aktuelle Run ID: ${{ github.run_id }}"
+          echo "Excel artifact wird nach Workflow-Ende verfügbar sein unter:"
+          echo "https://github.siemens.cloud/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+  # Job 4: Trigger notification workflow with direct artifact links
+  # This job calls the separate notify-assessment workflow to create detailed issues with artifact download links
+  trigger-notify:
+    runs-on: ubuntu-latest
+    needs: fill-excel  # Wait for notify to complete
+    steps:
+      # Download info.yml to extract ticket information for notification
+      - name: Download info.yml
+        uses: actions/download-artifact@v3
+        with:
+          name: info-yml
+
+      # Extract ticket ID and email for notification content
+      - name: Extract notification info
+        id: extract-info
+        run: |
+          SCD_MAIL=$(cat info.yml | grep scd_mail | awk '{print $2}')
+          TICKET_ID=$(cat info.yml | grep ticket_id | awk '{print $2}')
+          echo "scd_mail=$SCD_MAIL" >> $GITHUB_OUTPUT
+          echo "ticket_id=$TICKET_ID" >> $GITHUB_OUTPUT
+
+      # Trigger the separate notification workflow with direct artifact links
+      - name: Trigger notification workflow
+        run: |
+          ISSUE_TITLE="Assessment Excel Ready - Direct Downloads (Ticket: ${{ steps.extract-info.outputs.ticket_id }})"
+          ISSUE_BODY="🎯 **Assessment Excel Generation Complete**\n\nTicket ID: **${{ steps.extract-info.outputs.ticket_id }}**\nTriggered by: **${{ github.actor }}**\n\n📧 **Quick Email Notification:**\n[Send email to ${{ steps.extract-info.outputs.scd_mail }}](mailto:${{ steps.extract-info.outputs.scd_mail }}?subject=Assessment%20Excel%20Ready%20-%20Ticket%20${{ steps.extract-info.outputs.ticket_id }}&body=Hello,%0A%0AYour%20assessment%20Excel%20file%20has%20been%20generated%20successfully.%0A%0ATicket:%20${{ steps.extract-info.outputs.ticket_id }}%0AWorkflow%20Run:%20https://github.siemens.cloud/${{ github.repository }}/actions/runs/${{ github.run_id }}%0A%0APlease%20check%20the%20GitHub%20issue%20for%20direct%20download%20links.%0A%0ABest%20regards)"
+
+          echo "Repository: ${{ github.repository }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Ref name: ${{ github.ref_name }}"
+          echo "Target workflow path: .github/workflows/notify-assessment.yml"
+
+          # Resolve the workflow by path first because GHE may not reliably accept
+          # the file name or display name as workflow identifier in the dispatch URL.
+          WORKFLOWS_JSON=$(curl --fail --show-error --silent \
+            -H "Authorization: token ${{ secrets.GH_ISSUE_CREATOR_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://github.siemens.cloud/api/v3/repos/${{ github.repository }}/actions/workflows")
+
+          echo "Available workflows returned by API:"
+          echo "$WORKFLOWS_JSON" | jq -r '.workflows[] | [.id, .name, .path, .state] | @tsv'
+
+          WORKFLOW_ID=$(echo "$WORKFLOWS_JSON" | \
+            jq -r '.workflows[] | select(.path == ".github/workflows/notify-assessment.yml") | .id')
+
+          echo "Resolved workflow ID: ${WORKFLOW_ID:-<empty>}"
+
+          if [ -z "$WORKFLOW_ID" ] || [ "$WORKFLOW_ID" = "null" ]; then
+            echo "Workflow .github/workflows/notify-assessment.yml not found"
+            exit 1
+          fi
+          
+          # Dispatch the notification workflow on the same ref that started this run
+          # so the target workflow definition is resolved from the correct branch.
+          DISPATCH_PAYLOAD='{
+            "ref": "${{ github.ref_name }}",
+            "inputs": {
+              "run_id": "${{ github.run_id }}",
+              "repository": "${{ github.repository }}",
+              "actor": "${{ github.actor }}"
+            }
+          }'
+
+          echo "Dispatch payload: $DISPATCH_PAYLOAD"
+          echo "Dispatch URL: https://github.siemens.cloud/api/v3/repos/${{ github.repository }}/actions/workflows/$WORKFLOW_ID/dispatches"
+
+          curl --fail --show-error --silent -X POST \
+            -H "Authorization: token ${{ secrets.GH_ISSUE_CREATOR_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            "https://github.siemens.cloud/api/v3/repos/${{ github.repository }}/actions/workflows/$WORKFLOW_ID/dispatches" \
+            -d "$DISPATCH_PAYLOAD"
