@@ -1,0 +1,72 @@
+# Notification workflow for assessment Excel file completion
+# This workflow is triggered by the generate_assessment workflow to create
+# GitHub issues with direct artifact download links after workflow completion.
+# 
+# The workflow fetches artifacts from the specified run ID and creates
+# direct download links for each artifact in the GitHub issue.
+
+name: 'Create Assessment Notification Issue'
+description: 'Creates a GitHub issue with artifact download links for completed assessment workflows'
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'Run ID of the completed assessment workflow'
+        required: true
+        type: string
+      repository:
+        description: 'Repository name in format owner/repo'
+        required: true
+        type: string
+      actor:
+        description: 'GitHub username of the person who triggered the original workflow'
+        required: false
+        type: string
+
+jobs:
+  create-notification-issue:
+    runs-on: ubuntu-latest
+    steps:
+      # Download info.yml artifact from the specified workflow run
+      - name: Download info.yml artifact
+        run: |
+          # Get artifacts from the specified run
+          ARTIFACTS_JSON=$(curl -s -H "Authorization: token ${{ secrets.GH_ISSUE_CREATOR_TOKEN }}" \
+            "https://github.siemens.cloud/api/v3/repos/${{ inputs.repository }}/actions/runs/${{ inputs.run_id }}/artifacts")
+          
+          # Find info-yml artifact
+          INFO_ARTIFACT_ID=$(echo "$ARTIFACTS_JSON" | jq -r '.artifacts[] | select(.name == "info-yml") | .id')
+          
+          if [ -n "$INFO_ARTIFACT_ID" ] && [ "$INFO_ARTIFACT_ID" != "null" ]; then
+            echo "Downloading info-yml artifact (ID: $INFO_ARTIFACT_ID)"
+            
+            # Download the artifact
+            curl -L -H "Authorization: token ${{ secrets.GH_ISSUE_CREATOR_TOKEN }}" \
+              "https://github.siemens.cloud/api/v3/repos/${{ inputs.repository }}/actions/artifacts/$INFO_ARTIFACT_ID/zip" \
+              -o info-yml.zip
+            
+            # Extract the zip file
+            unzip -q info-yml.zip
+            
+            if [ -f "info.yml" ]; then
+              echo "Successfully downloaded and extracted info.yml"
+              cat info.yml
+            else
+              echo "Warning: info.yml not found in artifact"
+              touch info.yml  # Create empty file as fallback
+            fi
+          else
+            echo "Warning: info-yml artifact not found, creating empty info.yml"
+            touch info.yml
+          fi
+
+      # Create GitHub issue using the new comprehensive action
+      - name: Create Assessment Notification Issue
+        uses: simatic-ax/internal-actions/create-assessment-issue@v1
+        with:
+          run_id: ${{ inputs.run_id }}
+          info_file: info.yml
+          github_token: ${{ secrets.GH_ISSUE_CREATOR_TOKEN }}
+          repository: ${{ inputs.repository }}
+          actor: ${{ inputs.actor }}
