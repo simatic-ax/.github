@@ -1,4 +1,4 @@
-![main](./assets/images/GitHubCommunityBanner.svg)
+![main](./assets/images/GitHubCommunityBanner.png)
 
 # SIMATIC AX Community
 
