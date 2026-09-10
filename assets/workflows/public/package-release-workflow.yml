@@ -55,7 +55,7 @@ jobs:
       - name: Package source code
         uses: simatic-ax/actions/apax-pack@v4
         with:
-          key: ${{ secrets.APAX_SIGNKEY }}
+          key: ${{ secrets.APAX_SIGNKEY_V2 }}
 
       - name: Login to required registries
         uses: simatic-ax/actions/apax-login@v4
