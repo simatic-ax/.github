@@ -13,13 +13,16 @@ These templates can be used for:
 
 ## Overview of templates
 
-[List of all templates in this organization](https://github.com/search?q=topic%3Atemplate+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+[List of ALL `templates` in this organization](https://github.com/search?q=topic%3Atemplate+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
-Community core templates:
+[List of ALL `application-example-templates` in this organization](https://github.com/search?q=topic%3Atemplate+topic%3Aapplication-example+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+
+### Community core templates
 > Please use these promoted templates for creating new repositories in the GitHub community space and follow their instructions!
 
 | Template Name | Description |
 |-|-|
-| [template-ax2tia](https://github.com/simatic-ax/template-ax2tia) | Project template for an ax2tia workflow-optimized workspace |
 | [template-library](https://github.com/simatic-ax/template-library) | Project template optimized for AX library development |
 | [template-app](https://github.com/simatic-ax/template-app) | Project template optimized for AX application creation |
+| [template-generic](https://github.com/simatic-ax/template-generic) | Project template optimized for AX tool contributions |
+| [template-ax2tia](https://github.com/simatic-ax/template-ax2tia) | Project template for an ax2tia workflow-optimized workspace |

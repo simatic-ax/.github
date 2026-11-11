@@ -14,9 +14,9 @@ In addition, our release pipelines will create apax templates of these applicati
 
 ## Overview of application examples
 
-[List of all application examples in this organization](https://github.com/search?q=topic%3Aapplication-example+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+[List of ALL `application-examples` in this organization](https://github.com/search?q=topic%3Aapplication-example+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
-Promoted repositories:
+### Featured repositories
 
 | Application Name | Description |
 |-|-|

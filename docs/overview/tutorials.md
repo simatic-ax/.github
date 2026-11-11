@@ -11,9 +11,9 @@ These repositories can be used for:
 
 ## Overview of tutorials
 
-[List of all tutorials in this organization](https://github.com/search?q=topic%3Atutorials+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+[List of ALL `tutorials` in this organization](https://github.com/search?q=topic%3Atutorials+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
-Promoted repositories:
+### Promoted repositories
 
 | Tutorial Name | Description |
 |-|-|
