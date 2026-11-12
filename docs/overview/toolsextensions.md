@@ -6,8 +6,8 @@ Here you will find a collection of community-driven tools, extensions, and impro
 
 These tools and extensions can be used for:
 
-- adance your engineering experience
-- customize your axcode usability
+- advance your engineering experience
+- customize your SIMATIC AX Code usability
 - extend the product tool-chain
 
 ## Overview of tools
