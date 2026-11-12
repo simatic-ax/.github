@@ -11,7 +11,7 @@ These snippets can be used for:
 
 ## Overview of code snippets
 
-[List of all code snippets in this organization](https://github.com/search?q=topic%3Asnippets+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+[List of ALL `code-snippets` in this organization](https://github.com/search?q=topic%3Asnippets+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
 Promoted repositories:
 

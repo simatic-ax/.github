@@ -3,13 +3,15 @@
 # SIMATIC AX Community
 
 ## Table of Contents
-- [About Us](#about-us)
-- [Community Resources](#community-resources)
-- [Contributing](#contributing)
-- [Stay Informed](#stay-informed)
-- [Reusing Packages](#reusing-packages)
-- [More SIMATIC AX Communities](#more-simatic-ax-communities)
-- [More Siemens Projects](#more-siemens-projects)
+- [SIMATIC AX Community](#simatic-ax-community)
+  - [Table of Contents](#table-of-contents)
+  - [About Us](#about-us)
+  - [Community Resources](#community-resources)
+  - [Contributing](#contributing)
+  - [Stay Informed](#stay-informed)
+  - [Reusing packages](#reusing-packages)
+  - [More SIMATIC AX Communities](#more-simatic-ax-communities)
+  - [More Siemens Projects](#more-siemens-projects)
 
 ## About Us
 We believe that collaboration helps everybody to create better products and services, which ultimately makes our world a better place. We made it our mission to provide you with such a space to grow together. This space is here! Welcome to the SIMATIC AX GitHub Community.
@@ -26,7 +28,7 @@ The SIMATIC AX GitHub Community is a platform where you can find additional cont
 - **[Tutorials](../docs/overview/tutorials.md)** - Self-study materials
 - **[Code Snippets](../docs/overview/code-snippets.md)** - Reusable code components
 - **[Project Templates](../docs/overview/templates.md)** - Templates for quick project setup
-- Tools and Code Extensions - Custom engineering experiences [coming soon]
+- **[Tools, Code Extensions](../docs/overview/toolsextensions.md)** - Custom SIMATIC AX tool and engineering extensions
 
 > Notice: The actual product toolchain of SIMATIC AX is not hosted within this community space.
 

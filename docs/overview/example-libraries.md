@@ -12,7 +12,7 @@ These example libraries can be used for:
 
 ## Overview of libraries
 
-[List of all libraries in this organization](https://github.com/search?q=topic%3Alibrary+org%3Asimatic-ax+fork%3Atrue&type=repositories)
+[List of ALL `libraries` in this organization](https://github.com/search?q=topic%3Alibrary+org%3Asimatic-ax+fork%3Atrue&type=repositories)
 
 Promoted repositories:
 
